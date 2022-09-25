@@ -21,6 +21,7 @@ public class Main {
         String sign;
         float result;
 
+
         while (true) {
             System.out.println("Введите выражение типа А+B, A*B, A/B, A-B:");
             String ex = scanner.nextLine();
