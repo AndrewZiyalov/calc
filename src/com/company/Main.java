@@ -27,6 +27,8 @@ public class Main {
                 } else if (a == 2) {
                     maxWordInArray();
                 }
+            } else {
+                System.err.println("Введено не число");
             }
         }
 
@@ -48,12 +50,16 @@ public class Main {
             for (int i = 0; i < dict.length; i++) {
                 if (maxLength < dict[i].length()) {
                     maxLength = dict[i].length();
-                    maxCount = i;
                 }
             }
-            if (maxCount > -1) {
-                System.out.println("Самое длинное слово в массиве: " + dict[maxCount] + " длинной " + maxLength);
+            System.out.println("Самым длинным словом в массиве, длинной " + maxLength + " символа, является:");
+            for (String str : dict) {
+                if (str.length() == maxLength) {
+                    System.out.println(str);
+                }
             }
+        } else {
+            System.err.println("Введено не число");
         }
     }
 
